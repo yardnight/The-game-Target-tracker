@@ -4,9 +4,8 @@ const timeList = document.querySelector('#time-list')
 const ready = document.querySelector('#ready')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
-const colors = ['#ffea0f','#d510ef','#05eaff','#2cbafe','#608c13',
-'#e58251','#c61a0b','#fed562','#fff','rgb(252, 166, 126)','rgb(167, 255, 95)',
-'rgb(95, 236, 255)','rgb(195, 145, 252)','rgb(255, 102, 222)','rgb(253, 86, 86)' ]
+const colors = ['#E63946','#D90429','#F1FAEE','#EDF2F4','#A8DADC',
+'#00AFB9','#457B9D','#fee440','#f15bb5','#7bf1a8']
 let time = 0
 let score = 0
 
