@@ -1,7 +1,7 @@
 const startBtn = document.querySelector('#start')
-
 const screens = document.querySelectorAll('.screen')
 const timeList = document.querySelector('#time-list')
+const ready = document.querySelector('#ready')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
 const colors = ['#ffea0f','#d510ef','#05eaff','#2cbafe','#608c13',
@@ -11,7 +11,7 @@ let time = 0
 let score = 0
 
 
-startBtn.addEventListener('click', (event) =>{
+startBtn.addEventListener('click', event =>{
     event.preventDefault()
     screens[0].classList.add('up')
 })
@@ -20,11 +20,18 @@ timeList.addEventListener('click', event =>{
     if (event.target.classList.contains('time-btn')){
         time = parseInt(event.target.getAttribute('data-time'))
         screens[1].classList.add('up')
+        // startGame()
+    }
+})
+
+ready.addEventListener('click', event =>{
+    if (event.target.classList.contains('start-btn')){
+        screens[2].classList.add('up')
         startGame()
     }
 })
 
-board.addEventListener('click',(event)=>{
+board.addEventListener('click', event =>{
     if (event.target.classList.contains('circle')===true){
         score++
         event.target.remove()

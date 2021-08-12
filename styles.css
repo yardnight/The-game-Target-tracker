@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Khula&display=swap'); */
+@import url(https://fonts.googleapis.com/css?family=Khula:300,regular,600,700,800);
 
 * {
   box-sizing: border-box;
@@ -15,11 +16,21 @@ body {
 
 a {
   color: #fff;
+  padding: 10px 10px;
   text-decoration: none;
+  line-height: 20px;
+  font-size: 2rem;
+  font-weight: 900;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease 0s;
+  
 }
 
 a:hover {
   color: #ffe819;
+  box-shadow: 0px 0px 15px #ffe819;
+  border: 2px solid #ffe819;
 }
 
 .start {
@@ -27,8 +38,19 @@ a:hover {
 }
 
 h1 {
+  margin: 0 0 50px 0;
+  padding: 0;
   line-height: 1.4;
   font-size: 4rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0 0 0px 0;
+  padding: 0;
+  line-height: 15px;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .screen {
@@ -61,6 +83,7 @@ h1 {
 .time-btn {
   background-color: transparent;
   border: 2px solid #C0C0C0;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
@@ -72,7 +95,21 @@ h1 {
   border: 2px solid #16D9E3;
   color: #ffe819;
 }
+.start-btn{
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
 
+.start-btn:hover {
+  border: 2px solid #16D9E3;
+  color: #ffe819;
+}
 .hide {
   opacity: 0;
 }
