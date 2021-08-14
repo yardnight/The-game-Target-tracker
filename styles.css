@@ -12,6 +12,9 @@ body {
   overflow: hidden;
   margin: 0;
   text-align: center;
+  max-width:1440px;
+  min-width:319.95px;
+  
 }
 
 a {
@@ -21,7 +24,7 @@ a {
   line-height: 20px;
   font-size: 2rem;
   font-weight: 900;
-  border: 2px solid #fff;
+  border: 3px solid #C0C0C0;
   border-radius: 10px;
   transition: box-shadow 0.3s ease 0s;
   
@@ -35,6 +38,7 @@ a:hover {
 
 .start {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h1 {
@@ -51,6 +55,8 @@ h2 {
   line-height: 15px;
   font-size: 1.5rem;
   font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem
 }
 
 .screen {
@@ -60,12 +66,16 @@ h2 {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  transition: margin 0.5s ease-out;
+  transition: margin 0.5s ease-out 0.3s;
   background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+  padding: 0 20px 0 20px;
+  overflow: hidden;
 }
 
 .screen.up {
   margin-top: -100vh;
+  padding: 0 20px 0 20px;
+  overflow: hidden;
 }
 
 .time-list {
@@ -82,33 +92,41 @@ h2 {
 
 .time-btn {
   background-color: transparent;
-  border: 2px solid #C0C0C0;
+  border: 3px solid #C0C0C0;
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
   padding: .5rem 1rem;
   font-size: 1.5rem;
+  transition: box-shadow 0.3s ease 0s;
 }
 
 .time-btn:hover {
-  border: 2px solid #16D9E3;
+  border: 3px solid #16D9E3;
   color: #ffe819;
+  box-shadow: 0px 0px 15px #16D9E3;
+  
 }
-.start-btn{
+
+.go-btn{
   background-color: transparent;
-  border: 2px solid #C0C0C0;
+  border: 3px solid #C0C0C0;
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
   padding: .5rem 1rem;
   font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  transition: box-shadow 0.3s ease 0s;
 }
 
-.start-btn:hover {
-  border: 2px solid #16D9E3;
+.go-btn:hover {
+  border: 3px solid #16D9E3;
   color: #ffe819;
+  box-shadow: 0px 0px 15px #16D9E3;
 }
 .hide {
   opacity: 0;
@@ -129,7 +147,8 @@ h2 {
   box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
   border-radius: 30px;
   overflow: hidden;
-  border: 2px solid rgb(255, 210, 12);
+  border: 3px solid rgb(255, 210, 12);
+  margin: 0 20px 0 20px;
   
 }
 
@@ -138,4 +157,64 @@ h2 {
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
+}
+
+._active {
+  transition: all 1s ease 0s;
+  transform: translateY(-100vh) scale(0,0);
+  
+}
+
+
+@media (max-width: 767.98px) {
+  a{
+    font-size: 1.2rem;
+  }
+  h1{
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    
+  }
+  h2{
+    
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .start{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .go-btn {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .board {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 424.98px) {
+  a{
+    font-size: 1rem;
+  }
+  h1{
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+  .start{
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .go-btn{
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  .board {
+    width: 310px;
+    height: 310px;
+  }
 }

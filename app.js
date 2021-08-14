@@ -1,5 +1,6 @@
 const startBtn = document.querySelector('#start')
 const screens = document.querySelectorAll('.screen')
+// const timeBtn = document.querySelectorAll('.time-btn')
 const timeList = document.querySelector('#time-list')
 const ready = document.querySelector('#ready')
 const timeEl = document.querySelector('#time')
@@ -12,19 +13,22 @@ let score = 0
 
 startBtn.addEventListener('click', event =>{
     event.preventDefault()
+    event.target.classList.add('_active')
     screens[0].classList.add('up')
 })
 
 timeList.addEventListener('click', event =>{
     if (event.target.classList.contains('time-btn')){
         time = parseInt(event.target.getAttribute('data-time'))
+        event.target.classList.add('_active')
         screens[1].classList.add('up')
         // startGame()
     }
 })
 
 ready.addEventListener('click', event =>{
-    if (event.target.classList.contains('start-btn')){
+    if (event.target.classList.contains('go-btn')){
+        event.target.classList.add('_active')
         screens[2].classList.add('up')
         startGame()
     }
