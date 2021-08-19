@@ -33,12 +33,12 @@ a {
               0px 0px 1px #485563,
               inset -5px -5px 8px #6c7885,
               inset 5px 5px 8px #252c35;
-  transition: all 0.5s ease 0s;
+  transition: all 1s ease 0s;
   
 }
 
 a:hover {
-  color: #16D9E3;
+  color: #ffe819;
   background-color:#485563;
   box-shadow: 5px 5px 8px #1f262e,
               -5px -5px 8px #6c7885;
@@ -120,13 +120,17 @@ h3 {
   font-family: inherit;
   padding: .5rem 1rem;
   font-size: 1.5rem;
-  transition: all 0.3s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .time-btn:hover {
   border: 3px solid #16D9E3;
   color: #ffe819;
-  box-shadow: 0px 0px 15px #16D9E3;
+  /* box-shadow: 0px 0px 15px #16D9E3; */
+  box-shadow: 0px 0px 15px #16D9E3,
+              inset 5px 5px 8px #1f262e,
+              inset -5px -5px 8px #6c7885;
+  z-index: 5;
   
 }
 
@@ -141,13 +145,16 @@ h3 {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  transition: all 0.3s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .go-btn:hover {
   border: 3px solid #16D9E3;
   color: #ffe819;
-  box-shadow: 0px 0px 15px #16D9E3;
+  box-shadow: 0px 0px 15px #16D9E3,
+              inset 5px 5px 8px #1f262e,
+              inset -5px -5px 8px #6c7885;
+  z-index: 5;
 }
 .hide {
   opacity: 0;
@@ -166,29 +173,19 @@ h3 {
   width: 500px;
   height: 500px;
   background: #485563;
-  /* linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%); */
   box-shadow: -5px -5px 10px #485563, 
               5px 5px 10px #29323C;              
   border-radius: 30px;
   overflow: hidden;
   border: 3px solid rgb(255, 210, 12);
-  /* border:none; */
   margin: 0px 20px 0 20px;
   
 }
 
 .resett{
-  /* display: block;
-  margin: 0px auto;
-  padding: 50px 0; */
   justify-content: space-around;
   
 }
-/* .resett .board{
-  display: block;
-  margin: 50px auto;
-
-} */
 
 .reset-btn{
   background-color: transparent;
@@ -201,7 +198,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  transition: box-shadow 0.3s ease 0s;
+  transition: all 1s ease 0s;
   margin:0
 }
 
@@ -213,7 +210,6 @@ h3 {
 }
 
 .circle {
-  /* background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%); */
   position: absolute;
   border-radius: 50%;
   transition: box-shadow 0.5s ease 0s;
@@ -225,17 +221,10 @@ h3 {
 }
 
 ._active {
-  
   transform: translateY(-100vh) scale(0,0);
-  /* box-shadow: -5px -5px 8px #707c8b,
-              5px 5px 8px #1f262e,
-              inset -5px -5px 8px #707c8b,
-              inset 5px 5px 8px #1f262e; */
-  
 }
 
 ._vanish {
-  
   transition: all 0.5s ease 0s;
   background-color:#ffffff;
   transform: scale(0,0);

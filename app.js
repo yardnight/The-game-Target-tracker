@@ -18,7 +18,6 @@ startBtn.addEventListener('click', event =>{
     slide = screens[0]
     console.log(slide)
     setTimeout(upSlide, 100) 
-    // screens[0].classList.add('up')
 })
 
 timeList.addEventListener('click', event =>{
@@ -28,8 +27,6 @@ timeList.addEventListener('click', event =>{
         slide = screens[1]
         console.log(slide)
         setTimeout(upSlide, 100) 
-        // screens[1].classList.add('up')
-        // startGame()
     }
 })
 
@@ -37,9 +34,7 @@ ready.addEventListener('click', event =>{
     if (event.target.classList.contains('go-btn')){
         event.target.classList.add('_active')
         slide = screens[2]
-        console.log(slide)
         setTimeout(upSlide, 100) 
-        // screens[2].classList.add('up')
         startGame()
     }
 })
@@ -57,8 +52,7 @@ reStart.addEventListener('click', event =>{
     if (event.target.classList.contains('reset-btn')){
         event.target.parentNode.classList.add('_vanishdown')
         board.classList.add('_vanishup')
-        // event.target.classList.add('_vanish')
-        setTimeout(reload, 100)
+        setTimeout(reload, 500)
         
     }
 })
